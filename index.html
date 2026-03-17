@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice Malzac | Senior QA Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        section { display: none; }
+        section:target { display: block !important; }
+        #home { display: block; }
+        :has(section:target) #home { display: none; }
+        .sidebar-link:hover { background-color: #2a2d2e; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1e1e1e; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-[#181818] text-[#d4d4d4] font-mono h-screen flex flex-col overflow-hidden">
+
+    <div class="bg-[#323233] text-xs p-2 flex justify-between items-center select-none border-b border-[#1e1e1e]">
+        <div class="flex space-x-2 ml-2">
+            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+        </div>
+        <div class="text-gray-400">Alice_Malzac_Portfolio — Senior QA Engineer</div>
+        <div></div>
+    </div>
+
+    <div class="flex flex-1 overflow-hidden">
+        <aside class="w-64 bg-[#252526] border-r border-[#333] hidden md:block">
+            <div class="p-3 uppercase text-[10px] font-bold text-gray-500 tracking-widest">Explorer</div>
+            <nav class="text-sm">
+                <details open>
+                    <summary class="p-2 cursor-pointer hover:bg-[#2a2d2e] outline-none text-gray-300">📂 Portfolio</summary>
+                    <div class="pl-4">
+                        <a href="#home" class="sidebar-link block p-2 text-[#41af7d]"><i class="fa-brands fa-js-square mr-2"></i>about_me.js</a>
+                        <a href="#experience" class="sidebar-link block p-2 text-[#2eadff]"><i class="fa-solid fa-code-branch mr-2"></i>experience.json</a>
+                        <a href="#cases" class="sidebar-link block p-2 text-[#ff6c37]"><i class="fa-solid fa-file-lines mr-2"></i>success_cases.md</a>
+                        <a href="#education" class="sidebar-link block p-2 text-[#dcdcaa]"><i class="fa-solid fa-graduation-cap mr-2"></i>education.txt</a>
+                    </div>
+                </details>
+            </nav>
+        </aside>
+
+        <div class="flex-1 flex flex-col bg-[#1e1e1e]">
+            <div class="bg-[#252526] flex text-xs text-gray-400 border-b border-[#181818]">
+                <a href="#home" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">about_me.js</a>
+                <a href="#experience" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">experience.json</a>
+                <a href="#cases" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">success_cases.md</a>
+                <a href="#education" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">education.txt</a>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-10">
+                
+                <section id="home">
+                    <h2 class="text-[#6A9955] text-lg mb-2">// Senior Quality Assurance Engineer</h2>
+                    <h1 class="text-5xl font-bold text-white mb-6 tracking-tight">Alice Malzac</h1>
+                    <p class="text-xl text-gray-300 max-w-3xl leading-relaxed">
+                        Enthusiastic and results-driven professional with a passion for quality. With 6 years of experience in QA and 5 years working with JavaScript, I specialize in test automation frameworks, performance strategies, and managing defect lifecycles for high-scale products in the international market.
+                    </p>
+
+                    <div class="mt-8 bg-[#252526] p-6 rounded border border-[#333] max-w-3xl">
+                        <h3 class="text-[#dcdcaa] font-bold mb-4 text-lg">// Core_Competencies</h3>
+                        <p class="text-gray-400 mb-2"><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">expertTools</span> = [<span class="text-[#ce9178]">'Postman'</span>, <span class="text-[#ce9178]">'Azure DevOps'</span>, <span class="text-[#ce9178]">'JIRA'</span>, <span class="text-[#ce9178]">'QAse'</span>, <span class="text-[#ce9178]">'Playwright'</span>, <span class="text-[#ce9178]">'Cypress'</span>];</p>
+                        <p class="text-gray-400"><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">testingTypes</span> = [<span class="text-[#ce9178]">'API Test'</span>, <span class="text-[#ce9178]">'Performance Test'</span>, <span class="text-[#ce9178]">'Functional/Regression'</span>, <span class="text-[#ce9178]">'Exploratory'</span>];</p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
+                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold">Playwright</p></div>
+                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold">Cypress</p></div>
+                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#2eadff] font-bold">Azure DevOps</p></div>
+                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#7d64ff]">Locust / k6</p></div>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <h2 class="text-[#dcdcaa] text-2xl mb-8 font-bold">// Experience_Log</h2>
+                    <div class="space-y-12 border-l border-[#333] pl-8">
+                        
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ Exomindset</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">06/2025 - Present | Milwaukee Tools (USA)</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Implementing backend automated testing scripts using Playwright JS and Cypress.</li>
+                                <li>Leading a critical spike for stress and performance testing of the Tool Location Services (TLS) system.</li>
+                                <li>Developing and implementing comprehensive Test Plans in Azure DevOps using Gherkin.</li>
+                                <li>Testing REST and GraphQL APIs using Postman and performing automation testing.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">Test Engineer Intermediate @ Dev.Pro</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">04/2024 - Present | Global Payments (USA)</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Created and implemented a QA automation framework from scratch using C# and Playwright JS.</li>
+                                <li>Developing a performance testing framework based on Locust to identify bottlenecks and ensure application scalability for an app used by approximately 13,000 salespeople.</li>
+                                <li>Using APM tools like DataDog to monitor system performance and detect issues.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ CI&T</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">01/2024 - 04/2024 | RBI & PepsiCo</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Configured and utilized Flow, CI&T's proprietary AI tool, to optimize testing and development workflows.</li>
+                                <li>Performed frontend and back-end performance testing using k6.</li>
+                                <li>Orchestrated application releases via App Center for streamlined deployment processes.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ Wine</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">05/2023 - 12/2023</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Conducted performance testing using k6, Locust, and Grafana for the largest wine e-commerce platform in Latin America.</li>
+                                <li>Automated tests with Cypress and Cucumber.</li>
+                                <li>Implemented TestRail and developed a Jira dashboard for tracking test metrics.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">Junior / Mid Level QA Engineer @ PicPay</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">09/2020 - 04/2023</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Led weekly crowdtesting initiatives, involving 30+ participants executing 100+ test scenarios per week.</li>
+                                <li>Conducted performance tests utilizing an internal tool based on Locust.</li>
+                                <li>Automated BFF (Backend For Frontend) test scenarios to improve testing efficiency and accuracy.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white font-bold text-xl uppercase">QA Intern @ Agenda Edu</h3>
+                            <p class="text-gray-500 text-sm italic mb-4">06/2019 - 01/2020</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                                <li>Conducted non-automated tests on web and mobile platforms (iOS and Android), including functional, regressive, integration, exploratory, API, and acceptance testing for a platform with over 2.5 million users.</li>
+                                <li>Planned and executed test cases using TestLink to ensure comprehensive coverage.</li>
+                                <li>Reported and tracked bugs using Jira, facilitating resolution and improving software quality within a Scrum framework.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="cases">
+                    <h2 class="text-[#ff6c37] text-2xl mb-8 font-bold">// Success_Cases.md</h2>
+                    <div class="grid gap-8">
+                        <div class="bg-[#252526] p-6 rounded border border-[#333]">
+                            <h4 class="text-white font-bold mb-2">Architecting Automation (Global Payments)</h4>
+                            <p class="text-gray-400">Created and implemented a robust QA automation framework from scratch using C# and Playwright JS to support high-scale sales applications.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="education">
+                    <h2 class="text-[#dcdcaa] text-2xl mb-8 font-bold">// Education_and_Certs.txt</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-white font-bold">🎓 Academic Background</p>
+                            <p class="text-gray-400">Post-Graduation in Agile Testing | Cesar School (March 2024 - June 2025)</p>
+                            <p class="text-gray-400">Bachelor's in Computer Science | University of Fortaleza (UNIFOR) (Jan 2018 - Jan 2022)</p>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold mt-4">📜 Certifications & Focus</p>
+                            <p class="text-gray-400">Preparing for the ISTQB CTFL 4.0 certification (Exam: April 13, 2026)</p>
+                            <p class="text-gray-400">Foundations of Software Testing and Validation | University of Leeds (2025)</p>
+                            <p class="text-gray-400">Database Testing and SQL for Testers | Udemy (2025)</p>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold mt-4">🌐 Languages</p>
+                            <p class="text-gray-400">Portuguese (Native) | English (Fluent/C1) | French (Intermediate)</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#007acc] text-white text-[10px] px-3 py-1 flex justify-between">
+        <div class="flex space-x-4"><span>main*</span><span>0 errors</span></div>
+        <div>UTF-8 | HTML | Tailwind</div>
+    </footer>
+
+</body>
+</html>
