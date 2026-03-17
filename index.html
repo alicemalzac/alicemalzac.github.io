@@ -12,9 +12,15 @@
         #home { display: block; }
         :has(section:target) #home { display: none; }
         .sidebar-link:hover { background-color: #2a2d2e; }
-        ::-webkit-scrollbar { width: 8px; }
+        
+        /* Custom Scrollbar for Desktop */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: #1e1e1e; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        
+        /* Hide scrollbar for top mobile tabs but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-[#181818] text-[#d4d4d4] font-mono h-screen flex flex-col overflow-hidden">
@@ -25,12 +31,12 @@
             <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
             <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
         </div>
-        <div class="text-gray-400">Alice_Malzac_Portfolio — Senior QA Engineer</div>
-        <div></div>
+        <div class="text-gray-400 truncate px-4">Alice_Malzac_Portfolio — Senior QA Engineer</div>
+        <div class="w-10"></div>
     </div>
 
     <div class="flex flex-1 overflow-hidden">
-        <aside class="w-64 bg-[#252526] border-r border-[#333] hidden md:block">
+        <aside class="w-64 bg-[#252526] border-r border-[#333] hidden md:block flex-shrink-0">
             <div class="p-3 uppercase text-[10px] font-bold text-gray-500 tracking-widest">Explorer</div>
             <nav class="text-sm">
                 <details open>
@@ -46,46 +52,46 @@
             </nav>
         </aside>
 
-        <div class="flex-1 flex flex-col bg-[#1e1e1e]">
-            <div class="bg-[#252526] flex text-xs text-gray-400 border-b border-[#181818] overflow-x-auto whitespace-nowrap">
-                <a href="#home" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">about_me.js</a>
-                <a href="#experience" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">experience.json</a>
-                <a href="#cases" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">success_cases.md</a>
-                <a href="#projects" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">github_repos.json</a>
-                <a href="#education" class="px-4 py-2 border-r border-[#181818] hover:bg-[#1e1e1e]">education.txt</a>
+        <div class="flex-1 flex flex-col bg-[#1e1e1e] min-w-0">
+            <div class="bg-[#252526] flex text-xs md:text-sm text-gray-400 border-b border-[#181818] overflow-x-auto whitespace-nowrap hide-scrollbar flex-shrink-0">
+                <a href="#home" class="px-4 py-3 md:py-2 border-r border-[#181818] hover:bg-[#1e1e1e] active:bg-[#1e1e1e]">about_me.js</a>
+                <a href="#experience" class="px-4 py-3 md:py-2 border-r border-[#181818] hover:bg-[#1e1e1e] active:bg-[#1e1e1e]">experience.json</a>
+                <a href="#cases" class="px-4 py-3 md:py-2 border-r border-[#181818] hover:bg-[#1e1e1e] active:bg-[#1e1e1e]">success_cases.md</a>
+                <a href="#projects" class="px-4 py-3 md:py-2 border-r border-[#181818] hover:bg-[#1e1e1e] active:bg-[#1e1e1e]">github_repos.json</a>
+                <a href="#education" class="px-4 py-3 md:py-2 border-r border-[#181818] hover:bg-[#1e1e1e] active:bg-[#1e1e1e]">education.txt</a>
             </div>
 
-            <div class="flex-1 overflow-y-auto p-10">
+            <div class="flex-1 overflow-y-auto p-4 sm:p-6 md:p-10">
                 
                 <section id="home">
-                    <h2 class="text-[#6A9955] text-lg mb-2">// Senior Quality Assurance Engineer</h2>
-                    <h1 class="text-5xl font-bold text-white mb-6 tracking-tight">Alice Malzac</h1>
-                    <p class="text-xl text-gray-300 max-w-3xl leading-relaxed">
+                    <h2 class="text-[#6A9955] text-base md:text-lg mb-2">// Senior Quality Assurance Engineer</h2>
+                    <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">Alice Malzac</h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
                         Enthusiastic and results-driven professional with a passion for quality. With 6 years of experience in QA and 5 years working with JavaScript, I specialize in test automation frameworks, performance strategies, and managing defect lifecycles for high-scale products in the international market.
                     </p>
 
-                    <div class="mt-8 bg-[#252526] p-6 rounded border border-[#333] max-w-3xl">
-                        <h3 class="text-[#dcdcaa] font-bold mb-4 text-lg">// Core_Competencies</h3>
-                        <p class="text-gray-400 mb-2"><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">expertTools</span> = [<span class="text-[#ce9178]">'Postman'</span>, <span class="text-[#ce9178]">'Azure DevOps'</span>, <span class="text-[#ce9178]">'JIRA'</span>, <span class="text-[#ce9178]">'QAse'</span>, <span class="text-[#ce9178]">'Playwright'</span>, <span class="text-[#ce9178]">'Cypress'</span>];</p>
-                        <p class="text-gray-400"><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">testingTypes</span> = [<span class="text-[#ce9178]">'API Test'</span>, <span class="text-[#ce9178]">'Performance Test'</span>, <span class="text-[#ce9178]">'Functional/Regression'</span>, <span class="text-[#ce9178]">'Exploratory'</span>];</p>
+                    <div class="mt-6 md:mt-8 bg-[#252526] p-4 md:p-6 rounded border border-[#333] w-full overflow-x-auto">
+                        <h3 class="text-[#dcdcaa] font-bold mb-4 text-base md:text-lg whitespace-nowrap">// Core_Competencies</h3>
+                        <pre class="text-gray-400 mb-2 text-xs sm:text-sm md:text-base"><code><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">expertTools</span> = [<span class="text-[#ce9178]">'Postman'</span>, <span class="text-[#ce9178]">'Azure DevOps'</span>, <span class="text-[#ce9178]">'JIRA'</span>, <span class="text-[#ce9178]">'QAse'</span>, <span class="text-[#ce9178]">'Playwright'</span>, <span class="text-[#ce9178]">'Cypress'</span>];</code></pre>
+                        <pre class="text-gray-400 text-xs sm:text-sm md:text-base"><code><span class="text-[#569cd6]">const</span> <span class="text-[#4fc1ff]">testingTypes</span> = [<span class="text-[#ce9178]">'API Test'</span>, <span class="text-[#ce9178]">'Performance Test'</span>, <span class="text-[#ce9178]">'Functional/Regression'</span>, <span class="text-[#ce9178]">'Exploratory'</span>];</code></pre>
                     </div>
 
-                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
-                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold">Playwright</p></div>
-                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold">Cypress</p></div>
-                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#2eadff] font-bold">Azure DevOps</p></div>
-                        <div class="border border-[#333] p-4 rounded bg-[#252526] text-center"><p class="text-[#7d64ff]">Locust / k6</p></div>
+                    <div class="mt-6 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl">
+                        <div class="border border-[#333] p-3 md:p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold text-sm md:text-base">Playwright</p></div>
+                        <div class="border border-[#333] p-3 md:p-4 rounded bg-[#252526] text-center"><p class="text-[#41af7d] font-bold text-sm md:text-base">Cypress</p></div>
+                        <div class="border border-[#333] p-3 md:p-4 rounded bg-[#252526] text-center"><p class="text-[#2eadff] font-bold text-sm md:text-base">Azure DevOps</p></div>
+                        <div class="border border-[#333] p-3 md:p-4 rounded bg-[#252526] text-center"><p class="text-[#7d64ff] text-sm md:text-base">Locust / k6</p></div>
                     </div>
                 </section>
 
                 <section id="experience">
-                    <h2 class="text-[#dcdcaa] text-2xl mb-8 font-bold">// Experience_Log</h2>
-                    <div class="space-y-12 border-l border-[#333] pl-8">
+                    <h2 class="text-[#dcdcaa] text-xl md:text-2xl mb-6 md:mb-8 font-bold">// Experience_Log</h2>
+                    <div class="space-y-8 md:space-y-12 border-l border-[#333] pl-4 md:pl-8 ml-2 md:ml-0">
                         
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ Exomindset</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">06/2025 - Present | Milwaukee Tools (USA)</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">Senior QA Engineer @ Exomindset</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">06/2025 - Present | Milwaukee Tools (USA)</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Implementing backend automated testing scripts using Playwright JS and Cypress.</li>
                                 <li>Leading a critical spike for stress and performance testing of the Tool Location Services (TLS) system.</li>
                                 <li>Developing and implementing comprehensive Test Plans in Azure DevOps using Gherkin.</li>
@@ -94,9 +100,9 @@
                         </div>
 
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">Test Engineer Intermediate @ Dev.Pro</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">04/2024 - Present | Global Payments (USA)</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">Test Engineer Intermediate @ Dev.Pro</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">04/2024 - Present | Global Payments (USA)</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Created and implemented a QA automation framework from scratch using C# and Playwright JS.</li>
                                 <li>Developing a performance testing framework based on Locust to identify bottlenecks and ensure application scalability for an app used by approximately 13,000 salespeople.</li>
                                 <li>Using APM tools like DataDog to monitor system performance and detect issues.</li>
@@ -104,9 +110,9 @@
                         </div>
 
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ CI&T</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">01/2024 - 04/2024 | RBI & PepsiCo</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">Senior QA Engineer @ CI&T</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">01/2024 - 04/2024 | RBI & PepsiCo</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Configured and utilized Flow, CI&T's proprietary AI tool, to optimize testing and development workflows.</li>
                                 <li>Performed frontend and back-end performance testing using k6.</li>
                                 <li>Orchestrated application releases via App Center for streamlined deployment processes.</li>
@@ -114,9 +120,9 @@
                         </div>
 
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">Senior QA Engineer @ Wine</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">05/2023 - 12/2023</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">Senior QA Engineer @ Wine</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">05/2023 - 12/2023</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Conducted performance testing using k6, Locust, and Grafana for the largest wine e-commerce platform in Latin America.</li>
                                 <li>Automated tests with Cypress and Cucumber.</li>
                                 <li>Implemented TestRail and developed a Jira dashboard for tracking test metrics.</li>
@@ -124,9 +130,9 @@
                         </div>
 
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">Junior / Mid Level QA Engineer @ PicPay</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">09/2020 - 04/2023</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">Junior / Mid QA Engineer @ PicPay</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">09/2020 - 04/2023</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Led weekly crowdtesting initiatives, involving 30+ participants executing 100+ test scenarios per week.</li>
                                 <li>Conducted performance tests utilizing an internal tool based on Locust.</li>
                                 <li>Automated BFF (Backend For Frontend) test scenarios to improve testing efficiency and accuracy.</li>
@@ -134,9 +140,9 @@
                         </div>
 
                         <div>
-                            <h3 class="text-white font-bold text-xl uppercase">QA Intern @ Agenda Edu</h3>
-                            <p class="text-gray-500 text-sm italic mb-4">06/2019 - 01/2020</p>
-                            <ul class="text-gray-400 space-y-2 list-disc pl-4">
+                            <h3 class="text-white font-bold text-lg md:text-xl uppercase">QA Intern @ Agenda Edu</h3>
+                            <p class="text-gray-500 text-xs md:text-sm italic mb-3 md:mb-4">06/2019 - 01/2020</p>
+                            <ul class="text-gray-400 space-y-2 list-disc pl-4 text-sm md:text-base">
                                 <li>Conducted non-automated tests on web and mobile platforms (iOS and Android), including functional, regressive, integration, exploratory, API, and acceptance testing for a platform with over 2.5 million users.</li>
                                 <li>Planned and executed test cases using TestLink to ensure comprehensive coverage.</li>
                                 <li>Reported and tracked bugs using Jira, facilitating resolution and improving software quality within a Scrum framework.</li>
@@ -147,61 +153,61 @@
                 </section>
 
                 <section id="cases">
-                    <h2 class="text-[#ff6c37] text-2xl mb-8 font-bold">// Success_Cases.md</h2>
-                    <div class="grid gap-8">
-                        <div class="bg-[#252526] p-6 rounded border border-[#333]">
+                    <h2 class="text-[#ff6c37] text-xl md:text-2xl mb-6 md:mb-8 font-bold">// Success_Cases.md</h2>
+                    <div class="grid gap-6 md:gap-8">
+                        <div class="bg-[#252526] p-4 md:p-6 rounded border border-[#333]">
                             <h4 class="text-white font-bold mb-2">Architecting Automation (Global Payments)</h4>
-                            <p class="text-gray-400">Created and implemented a robust QA automation framework from scratch using C# and Playwright JS to support high-scale sales applications.</p>
+                            <p class="text-gray-400 text-sm md:text-base">Created and implemented a robust QA automation framework from scratch using C# and Playwright JS to support high-scale sales applications.</p>
                         </div>
                     </div>
                 </section>
 
                 <section id="projects">
-                    <h2 class="text-[#c586c0] text-2xl mb-2 font-bold">// GitHub_Repositories.json</h2>
-                    <p class="text-gray-500 mb-8 italic">/* Check out my open-source contributions and personal projects at <a href="https://github.com/alicemalzac" target="_blank" class="text-[#3794ff] hover:underline">github.com/alicemalzac</a> */</p>
+                    <h2 class="text-[#c586c0] text-xl md:text-2xl mb-2 font-bold">// GitHub_Repositories.json</h2>
+                    <p class="text-gray-500 mb-6 md:mb-8 italic text-sm md:text-base">/* Check out my open-source contributions and personal projects at <a href="https://github.com/alicemalzac" target="_blank" class="text-[#3794ff] hover:underline">github.com/alicemalzac</a> */</p>
                     
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-[#252526] p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-[#569cd6] font-bold text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>exodo-seguros-erp</h3>
-                                <span class="text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div class="bg-[#252526] p-4 md:p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
+                            <div class="flex justify-between items-start mb-3 md:mb-4">
+                                <h3 class="text-[#569cd6] font-bold text-base md:text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>exodo-seguros-erp</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-4">Freelance project: Website and ERP system development for Êxodo Seguros. Includes full quality assurance lifecycle, functional testing, and delivery.</p>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">Freelance project: Website and ERP system development for Êxodo Seguros. Includes full quality assurance lifecycle, functional testing, and delivery.</p>
                             <div class="flex space-x-4 text-xs text-gray-500">
                                 <span class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f1e05a] mr-1"></div>JavaScript</span>
                             </div>
                         </div>
 
-                        <div class="bg-[#252526] p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-[#569cd6] font-bold text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>playwright-e2e-framework</h3>
-                                <span class="text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
+                        <div class="bg-[#252526] p-4 md:p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
+                            <div class="flex justify-between items-start mb-3 md:mb-4">
+                                <h3 class="text-[#569cd6] font-bold text-base md:text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>playwright-e2e-framework</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-4">A robust, scalable end-to-end test automation framework built from scratch using Playwright JS, featuring Page Object Model (POM) and API mocks.</p>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">A robust, scalable end-to-end test automation framework built from scratch using Playwright JS, featuring Page Object Model (POM) and API mocks.</p>
                             <div class="flex space-x-4 text-xs text-gray-500">
                                 <span class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#3178c6] mr-1"></div>TypeScript</span>
                                 <span><i class="fa-solid fa-star mr-1"></i>12</span>
                             </div>
                         </div>
 
-                        <div class="bg-[#252526] p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-[#569cd6] font-bold text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>k6-performance-suite</h3>
-                                <span class="text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
+                        <div class="bg-[#252526] p-4 md:p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
+                            <div class="flex justify-between items-start mb-3 md:mb-4">
+                                <h3 class="text-[#569cd6] font-bold text-base md:text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>k6-performance-suite</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-4">Load and stress testing scripts using k6. Includes examples for testing REST/GraphQL APIs and generating metrics for Grafana/DataDog.</p>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">Load and stress testing scripts using k6. Includes examples for testing REST/GraphQL APIs and generating metrics for Grafana/DataDog.</p>
                             <div class="flex space-x-4 text-xs text-gray-500">
                                 <span class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f1e05a] mr-1"></div>JavaScript</span>
                                 <span><i class="fa-solid fa-star mr-1"></i>8</span>
                             </div>
                         </div>
 
-                        <div class="bg-[#252526] p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-[#569cd6] font-bold text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>cypress-bdd-automation</h3>
-                                <span class="text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
+                        <div class="bg-[#252526] p-4 md:p-6 rounded border border-[#333] hover:border-[#569cd6] transition-colors">
+                            <div class="flex justify-between items-start mb-3 md:mb-4">
+                                <h3 class="text-[#569cd6] font-bold text-base md:text-lg"><i class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>cypress-bdd-automation</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400 border border-gray-600 rounded-full px-2 py-1">Public</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-4">BDD automation testing project using Cypress and Cucumber to validate web applications using Gherkin syntax.</p>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">BDD automation testing project using Cypress and Cucumber to validate web applications using Gherkin syntax.</p>
                             <div class="flex space-x-4 text-xs text-gray-500">
                                 <span class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f1e05a] mr-1"></div>JavaScript</span>
                                 <span><i class="fa-solid fa-star mr-1"></i>5</span>
@@ -211,22 +217,22 @@
                 </section>
 
                 <section id="education">
-                    <h2 class="text-[#dcdcaa] text-2xl mb-8 font-bold">// Education_and_Certs.txt</h2>
-                    <div class="space-y-6">
+                    <h2 class="text-[#dcdcaa] text-xl md:text-2xl mb-6 md:mb-8 font-bold">// Education_and_Certs.txt</h2>
+                    <div class="space-y-4 md:space-y-6">
                         <div>
-                            <p class="text-white font-bold">🎓 Academic Background</p>
-                            <p class="text-gray-400">Post-Graduation in Agile Testing | Cesar School (March 2024 - June 2025)</p>
-                            <p class="text-gray-400">Bachelor's in Computer Science | University of Fortaleza (UNIFOR) (Jan 2018 - Jan 2022)</p>
+                            <p class="text-white font-bold text-sm md:text-base">🎓 Academic Background</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Post-Graduation in Agile Testing | Cesar School (March 2024 - June 2025)</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Bachelor's in Computer Science | University of Fortaleza (UNIFOR) (Jan 2018 - Jan 2022)</p>
                         </div>
-                        <div>
-                            <p class="text-white font-bold mt-4">📜 Certifications & Focus</p>
-                            <p class="text-gray-400">Preparing for the ISTQB CTFL 4.0 certification (Exam: April 13, 2026)</p>
-                            <p class="text-gray-400">Foundations of Software Testing and Validation | University of Leeds (2025)</p>
-                            <p class="text-gray-400">Database Testing and SQL for Testers | Udemy (2025)</p>
+                        <div class="pt-2">
+                            <p class="text-white font-bold text-sm md:text-base">📜 Certifications & Focus</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Preparing for the ISTQB CTFL 4.0 certification (Exam: April 13, 2026)</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Foundations of Software Testing and Validation | University of Leeds (2025)</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Database Testing and SQL for Testers | Udemy (2025)</p>
                         </div>
-                        <div>
-                            <p class="text-white font-bold mt-4">🌐 Languages</p>
-                            <p class="text-gray-400">Portuguese (Native) | English (Fluent/C1) | French (Intermediate)</p>
+                        <div class="pt-2">
+                            <p class="text-white font-bold text-sm md:text-base">🌐 Languages</p>
+                            <p class="text-gray-400 text-sm md:text-base mt-1">Portuguese (Native) | English (Fluent/C1) | French (Intermediate)</p>
                         </div>
                     </div>
                 </section>
@@ -235,9 +241,9 @@
         </div>
     </div>
 
-    <footer class="bg-[#007acc] text-white text-[10px] px-3 py-1 flex justify-between">
+    <footer class="bg-[#007acc] text-white text-[10px] px-3 py-1 flex justify-between flex-shrink-0">
         <div class="flex space-x-4"><span>main*</span><span>0 errors</span></div>
-        <div>UTF-8 | HTML | Tailwind</div>
+        <div class="hidden sm:block">UTF-8 | HTML | Tailwind</div>
     </footer>
 
 </body>
